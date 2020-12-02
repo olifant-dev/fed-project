@@ -1,0 +1,1027 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* HOME PAGE - START */
+/* Fancy Intro */
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    background: #023e8a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.intro-text {
+    color: rgb(233, 233, 233);
+    font-size: 3rem;
+    font-family: "Heebo", sans-serif;
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+/* Span is an inline element so if u want to manipulate its position, you have to change its display to inline-block */
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+body {
+    background: #5390d9;
+}
+
+/* NAV BAR  */
+header {
+    background: #023e8a;
+}
+
+nav {
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links li {
+    padding: 1.5rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: #f1faee;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+}
+
+.links a:hover {
+    color: #fb8500;
+}
+
+/* LOGO THAT IS INSIDE THE NAVBAR WITH BEHIND "KLAUDIA" */
+.logo-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#logo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Lobster", cursive;
+    color: #f1faee;
+    text-shadow: 1px 1px black;
+    z-index: 2;
+}
+
+.logo-image {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+/* AN IMAGE OF A SAILING BOAT */
+.banner {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 925px;
+}
+
+/* THE TEXT THAT IS IN THE MIDDLE OF SAILING BOAT PICTURE */
+.big-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-family: "Lobster", cursive;
+    color: rgb(61, 61, 61);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f1faee;
+    text-shadow: 1px 1px black;
+    width: 100%;
+}
+
+.big-text .text1 {
+    font-size: 4rem;
+}
+
+.big-text .text2 {
+    margin-top: 60px;
+    font-size: 2.5rem;
+}
+
+.big-text .text3 {
+    font-size: 2rem;
+}
+
+/* THIS IS THE CONTAINER OF WELCOME DESCRIPTION PART RIGHT UNDER THE SAILINGBOAT IMAGE */
+.welcome-info {
+    margin-top: 150px;
+    opacity: 0;
+    width: 100%;
+    height: 40vh;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+}
+
+/* AN EFFECT OF MAKING THE WELCOME CONTAINER APPEAR */
+.welcome-info-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.welcome-info-container {
+    position: relative;
+    width: 50%;
+    height: 250px;
+    margin: 0 25% 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THIS IS THE "WELCOME" part */
+.welcome-info-container h1 {
+    align-self: flex-start;
+    color: #f1faee;
+    font-family: "Lobster",
+        cursive;
+    font-size: 50px;
+    text-shadow: 1px 1px black;
+    border-bottom: 3px solid #fb8500;
+}
+
+/* THIS IS THE PARAGRAPH INSIDE THE WELCOME CONTAINER */
+.welcome-info-container p {
+    text-align: center;
+    color: #f1faee;
+    font-family: "Poppins",
+        sans-serif;
+    border-left: 3px solid #fb8500;
+}
+
+/* THIS IS THE OFFER CONTAINER */
+.offer-wrapper {
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    transform: translateY(20px);
+    width: 50%;
+    height: 500px;
+    margin: 0 25% 0 25%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+/* AN EFFECT OF MAKING THE OFFER APPEAR */
+.offer-wrapper-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.item1 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
+}
+
+/* THOSE 8 ICONS IN THE OFFER SECTION */
+.image-icon {
+    align-self: center;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fb8500;
+    background: #fb8500;
+    border-radius: 50px;
+}
+
+.item1 img {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+/* HEADING OF THE OFFER ITEMS */
+.item1 h1 {
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.item1 p {
+    font-size: 15px;
+}
+
+.item1 p,
+h1 {
+    text-align: center;
+    color: #f1faee;
+    font-family: "Poppins",
+        sans-serif;
+}
+
+/* OFFER HEADING FOR THE 6 EXAMPLE ROOMS */
+.offer-title h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+    font-family: "Lobster",
+        sans-serif;
+    font-size: 3rem;
+    text-shadow: 1px 1px black;
+}
+
+/* AN EFFECT THAT APPEARS THE HEADING*/
+.offer-title-appear h1 {
+    opacity: 1;
+    transform: translateY(0px);
+    font-family: "Lobster",
+        sans-serif;
+}
+
+/* CONTAINER FOR THE 6 EXAMPLE ROOMS */
+.container {
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    transform: translateY(20px);
+    margin-top: 80px;
+    width: 100%;
+    height: 75vh;
+}
+
+/* CONTAINER FOR EACH FLIPING CARD */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    margin: 0 25% 0 25%;
+    width: 50%;
+    height: 600px;
+}
+
+/* AN EFFECT THAT MAKES THE OFFER APPEAR */
+.container-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* If you hover on it, there won't be an visual effect lag which will stack the card in constant 40degrees rotation - "TRANSFORM-STYLE: preserve-3d;"*/
+.card {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* It is only for firefox visual glitch that I have faced during making a tutorial of how to make this visual effect */
+    backface-visibility: hidden;
+    /* Having a margin issue, you can just put margin:0 and tha card will flip in one place */
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It give the direction to our elements inside the card */
+    flex-direction: column;
+}
+
+.card .front {
+    width: 100%;
+    height: 100%;
+    background-color: #fb8500;
+    color: white;
+    text-align: center;
+}
+
+.card .front p {
+    padding: 5px;
+}
+
+.card .front img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card .back {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    /* It happens because we decleared position as absolute so one card is on the top of the other */
+    /* With this transfrom and rotate in this particular class, the back-card rotates too */
+    transform: rotateY(180deg);
+}
+
+/* BUTTON THAT IS ON THE BACKSIDE OF THE FLIPING CARD */
+.back button {
+    background-color: #fb8500;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+/* THE REST OF THE CARDS UNTIL THE 6TH ONE */
+.card2 {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card2:hover {
+    transform: rotateY(180deg);
+}
+
+.card2 figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* It is only for firefox visual glitch that I have faced during making a tutorial of how to make this visual effect */
+    backface-visibility: hidden;
+    /* Having a margin issue, you can just put margin:0 and tha card will flip in one place */
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It give the direction to our elements inside the card */
+    flex-direction: column;
+}
+
+.card2 .front2 {
+    background-color: #fb8500;
+    color: white;
+    text-align: center;
+}
+
+.card2 .front2 p {
+    padding: 5px;
+}
+
+.card2 .front2 img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card2 .back2 {
+    background-color: blue;
+    color: white;
+    /* It happens because we decleared position as absolute so one card is on the top of the other */
+    /* With this transfrom and rotate in this particular class, the back-card rotates too */
+    transform: rotateY(180deg);
+}
+
+.back2 button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.card3 {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card3:hover {
+    transform: rotateY(180deg);
+}
+
+.card3 figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* It is only for firefox visual glitch that I have faced during making a tutorial of how to make this visual effect */
+    backface-visibility: hidden;
+    /* Having a margin issue, you can just put margin:0 and tha card will flip in one place */
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It give the direction to our elements inside the card */
+    flex-direction: column;
+}
+
+.card3 .front3 {
+    background-color: #fb8500;
+    color: white;
+    text-align: center;
+}
+
+.card3 .front3 p {
+    padding: 5px;
+}
+
+.card3 .front3 img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card3 .back3 {
+    background-color: blue;
+    color: white;
+    /* It happens because we decleared position as absolute so one card is on the top of the other */
+    /* With this transfrom and rotate in this particular class, the back-card rotates too */
+    transform: rotateY(180deg);
+}
+
+.back3 button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.card4 {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card4:hover {
+    transform: rotateY(180deg);
+}
+
+.card4 figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* It is only for firefox visual glitch that I have faced during making a tutorial of how to make this visual effect */
+    backface-visibility: hidden;
+    /* Having a margin issue, you can just put margin:0 and tha card will flip in one place */
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It give the direction to our elements inside the card */
+    flex-direction: column;
+}
+
+.card4 .front4 {
+    background-color: #fb8500;
+    color: white;
+    text-align: center;
+}
+
+.card4 .front4 p {
+    padding: 5px;
+}
+
+.card4 .front4 img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card4 .back4 {
+    background-color: blue;
+    color: white;
+    /* It happens because we decleared position as absolute so one card is on the top of the other */
+    /* With this transfrom and rotate in this particular class, the back-card rotates too */
+    transform: rotateY(180deg);
+}
+
+.back4 button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.card5 {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card5:hover {
+    transform: rotateY(180deg);
+}
+
+.card5 figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* It is only for firefox visual glitch that I have faced during making a tutorial of how to make this visual effect */
+    backface-visibility: hidden;
+    /* Having a margin issue, you can just put margin:0 and tha card will flip in one place */
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It give the direction to our elements inside the card */
+    flex-direction: column;
+}
+
+.card5 .front5 {
+    background-color: #fb8500;
+    color: white;
+    text-align: center;
+}
+
+.card5 .front5 p {
+    padding: 5px;
+}
+
+.card5 .front5 img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card5 .back5 {
+    background-color: blue;
+    color: white;
+    /* It happens because we decleared position as absolute so one card is on the top of the other */
+    /* With this transfrom and rotate in this particular class, the back-card rotates too */
+    transform: rotateY(180deg);
+}
+
+.back5 button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.card6 {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card6:hover {
+    transform: rotateY(180deg);
+}
+
+.card6 figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* It is only for firefox visual glitch that I have faced during making a tutorial of how to make this visual effect */
+    backface-visibility: hidden;
+    /* Having a margin issue, you can just put margin:0 and tha card will flip in one place */
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* It give the direction to our elements inside the card */
+    flex-direction: column;
+}
+
+.card6 .front6 {
+    background-color: #fb8500;
+    color: white;
+    text-align: center;
+}
+
+.card6 .front6 p {
+    padding: 5px;
+}
+
+.card6 .front6 img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card6 .back6 {
+    background-color: blue;
+    color: white;
+    /* It happens because we decleared position as absolute so one card is on the top of the other */
+    /* With this transfrom and rotate in this particular class, the back-card rotates too */
+    transform: rotateY(180deg);
+}
+
+.back6 button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.rev-section {
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    transform: translateY(20px);
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.rev-section-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.title-rev {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(50, 50, 50);
+    margin-bottom: .5rem;
+    font-family: "Lobster",
+        sans-serif;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.note-rev {
+    font-family: "Lobster",
+        sans-serif;
+    color: #fb8500;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px black;
+}
+
+.reviews {
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review {
+    margin: 0 1rem;
+    min-width: 300px;
+    flex: 1;
+}
+
+.head-review {
+    margin: 1.75rem auto;
+    width: 150px;
+    height: 150px;
+}
+
+.review img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+.body-review {
+    background-color: rgb(238, 238, 238);
+    padding: 2.5rem;
+    box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
+    border-radius: 5px;
+}
+
+.name-review {
+    font-family: "Poppins",
+        sans-serif;
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+    margin-bottom: .25rem;
+}
+
+.place-review {
+    font-family: "Poppins",
+        sans-serif;
+    color: red;
+}
+
+.rating {
+    color: rgb(253, 180, 42);
+    margin: 1rem 0;
+}
+
+.desc-review {
+    font-family: "Poppins",
+        sans-serif;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    color: rgb(150, 150, 150);
+}
+
+/* FOOTER SECTION */
+footer {
+    margin-top: 150px;
+    background-color: #023e8a;
+    width: 100%;
+    min-height: 8vh;
+    color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer li {
+    font-size: 20px;
+    align-self: center;
+    text-shadow: 1px 1px black;
+}
+
+/* HOME PAGE - END */
+
+
+/* CONTACT US PAGE - START */
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-contactus {
+    width: 1300px;
+    height: 300px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 300px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 1300px;
+    height: 300px;
+}
+
+/* css for manual slide navigation */
+
+.navigation-manual {
+    position: absolute;
+    width: 1300px;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #023e8a;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 50px;
+}
+
+.manual-btn:hover {
+    background: #023e8a;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+
+}
+
+/* css for automatic navigation */
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1300px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    display: none;
+    border: 2px solid #023e8a;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: #023e8a;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: #023e8a;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: #023e8a;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: #023e8a;
+}
+
+.container-contactus {
+    width: 1300px;
+    margin: 50px auto;
+    font-size: 14px;
+    font-family: 'Poppins',
+        sans-serif;
+    position: relative;
+}
+
+.contact-box {
+    background: #fb8500;
+    display: flex;
+}
+
+.contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right {
+    font-weight: bold;
+    font-family: 'Poppins',
+        sans-serif;
+    flex-basis: 40%;
+    padding: 40px;
+    background: #1c00b5;
+    color: #fb8500;
+}
+
+.container-contactus h1 {
+    font-family: 'Poppins',
+        sans-serif;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-size: 25px;
+}
+
+.container-contactus p {
+    margin-bottom: 10px;
+    font-family: 'Poppins',
+        sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px black;
+    font-size: 15px;
+}
+
+.container p {
+    margin-bottom: 40px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+input {
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: #1c00b5;
+}
+
+button {
+    font-family: 'Poppins',
+        sans-serif;
+    background: #1c00b5;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+
+.contact-left h3 {
+    color: #1c00b5;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h3 {
+    color: #fb8500;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+tr td:first-child {
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}
+
+/* CONTACT US PAGE - END */
